@@ -1,0 +1,12 @@
+object Form2: TForm2
+  Left = 773
+  Height = 240
+  Top = 235
+  Width = 320
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Form2'
+  Color = clBackground
+  OnClose = FormClose
+  LCLVersion = '3.6.0.0'
+end

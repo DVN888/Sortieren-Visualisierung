@@ -1,0 +1,299 @@
+object Form1: TForm1
+  Left = 317
+  Height = 825
+  Top = 402
+  Width = 1050
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Vergleich und Veranschaulichung verschiedener Sortierverfahren'
+  ClientHeight = 825
+  ClientWidth = 1050
+  Color = clCream
+  DesignTimePPI = 144
+  Font.CharSet = ANSI_CHARSET
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  object ListBoxStartbelegung: TListBox
+    Left = 30
+    Height = 712
+    Top = 82
+    Width = 150
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object ListBoxSortierteZahlen: TListBox
+    Left = 210
+    Height = 712
+    Top = 82
+    Width = 150
+    ItemHeight = 0
+    TabOrder = 1
+  end
+  object RadioGroupAnzahl: TRadioGroup
+    Left = 390
+    Height = 240
+    Top = 30
+    Width = 300
+    AutoFill = True
+    Caption = 'Anzahl der zu sortierenden Zahlen'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 214
+    ClientWidth = 296
+    Columns = 2
+    ItemIndex = 3
+    Items.Strings = (
+      '50'
+      '100'
+      '200'
+      '400'
+      '500'
+      '900'
+      '2000'
+      '10000'
+    )
+    ParentBackground = False
+    TabOrder = 2
+    OnClick = RadioGroupAnzahlClick
+  end
+  object RadioGroupVerteilung: TRadioGroup
+    Left = 720
+    Height = 180
+    Top = 30
+    Width = 300
+    AutoFill = True
+    Caption = 'Art der Zahlenverteilung'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 154
+    ClientWidth = 296
+    ItemIndex = 0
+    Items.Strings = (
+      'echt zufällig'
+      'absteigend'
+      'alternierend 1'
+      'alternierend 2'
+    )
+    ParentBackground = False
+    TabOrder = 3
+  end
+  object CheckBoxVeranschaulichung: TCheckBox
+    Left = 720
+    Height = 25
+    Top = 240
+    Width = 259
+    Caption = 'Grafische Veranschaulichung'
+    TabOrder = 4
+    OnClick = CheckBoxVeranschaulichungClick
+  end
+  object Label1: TLabel
+    Left = 30
+    Height = 22
+    Top = 38
+    Width = 150
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Startbelegung'
+  end
+  object Label2: TLabel
+    Left = 210
+    Height = 22
+    Top = 38
+    Width = 150
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Sortierte Zahlen'
+  end
+  object ButtonErzeugen: TButton
+    Left = 390
+    Height = 45
+    Top = 300
+    Width = 420
+    Caption = 'Neue Belegung erzeugen'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -20
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = ButtonErzeugenClick
+  end
+  object ButtonGleich: TButton
+    Left = 840
+    Height = 45
+    Top = 300
+    Width = 180
+    Caption = 'Gleiche Belegung'
+    TabOrder = 6
+    OnClick = ButtonGleichClick
+  end
+  object RadioGroupVerfahren: TRadioGroup
+    Left = 390
+    Height = 150
+    Top = 375
+    Width = 420
+    AutoFill = True
+    Caption = 'Sortierverfahren'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 124
+    ClientWidth = 416
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'systematisches Vergleichen'
+      'Bubblesort'
+      'Selection Sort'
+      'Insertion Sort'
+      'Shellsort'
+      'Quicksort'
+      'Mergesort'
+    )
+    ParentBackground = False
+    TabOrder = 7
+  end
+  object RadioGroupVerzoegerung: TRadioGroup
+    Left = 840
+    Height = 150
+    Top = 375
+    Width = 180
+    AutoFill = True
+    Caption = 'Verzögerung'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 124
+    ClientWidth = 176
+    Columns = 3
+    ItemIndex = 0
+    Items.Strings = (
+      '0'
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+    )
+    ParentBackground = False
+    TabOrder = 8
+  end
+  object ButtonStart: TButton
+    Left = 390
+    Height = 45
+    Top = 555
+    Width = 630
+    Caption = 'Sortieren starten'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 9
+    OnClick = ButtonStartClick
+  end
+  object GroupBoxZeit: TGroupBox
+    Left = 390
+    Height = 90
+    Top = 630
+    Width = 300
+    Caption = 'Zeit'
+    ClientHeight = 64
+    ClientWidth = 296
+    ParentBackground = False
+    TabOrder = 10
+    object LabelZeit: TLabel
+      Left = 0
+      Height = 64
+      Top = 0
+      Width = 296
+      Align = alClient
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'zeit hier bitte'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = 60
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OptimalFill = True
+      ParentFont = False
+    end
+  end
+  object GroupBoxAnzahl: TGroupBox
+    Left = 720
+    Height = 90
+    Top = 630
+    Width = 300
+    Caption = 'Anzahl der Zuweisungen'
+    ClientHeight = 64
+    ClientWidth = 296
+    ParentBackground = False
+    TabOrder = 11
+    object LabelAnzahlZuweisungen: TLabel
+      Left = 0
+      Height = 64
+      Top = 0
+      Width = 296
+      Align = alClient
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'pls anweis'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = 60
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OptimalFill = True
+      ParentFont = False
+    end
+  end
+  object ButtonEnde: TButton
+    Left = 390
+    Height = 45
+    Top = 750
+    Width = 630
+    Caption = 'Programm beenden'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 12
+    OnClick = ButtonEndeClick
+  end
+  object LabelName: TLabel
+    Left = 0
+    Height = 21
+    Top = 0
+    Width = 128
+    Caption = 'Dung Nguyen ©'
+  end
+end
