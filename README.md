@@ -1,7 +1,7 @@
 # Sortieren-Visualisierung
 Visualisiert verschiedene Sortierverfahren. Darunter sind: Bubblesort, Selection Sort, Insertion Sort, Shellsort, Quicksort, Mergesort und Insertion Sort mit binärer Suche
 
-Bei Insertion Sort mit binärer Suche wird angenommen, dass der Aufwand des Vergleichen der Elemente viel teurer sei als der Aufwand der Wertvertauschung.
+Bei Insertion Sort mit binärer Suche wird angenommen, dass der Aufwand des Vergleichens der Elemente viel teurer sei als der Aufwand der Wertvertauschung.
 
 `*.exe` öffnen zum Starten.
 
